@@ -1,0 +1,297 @@
+:root {
+  --primary-bg-color: #313131;
+  --mobile-nav-color: rgba(49, 49, 49, 0.9);
+  --accent-color: #4d4d4d;
+  --custom-white: #f6f6f6;
+  --custom-black: #191919;
+}
+
+body {
+  background-color: var(--primary-bg-color);
+  /* Global text color */
+  color: var(--custom-white);
+}
+
+/* Anchors Nav-bar position on Desktop to top */
+.nav-bar {
+  position: fixed;
+  z-index: 999;
+}
+
+nav ul a {
+  font-size: 1.4em;
+}
+
+.card .card-image .title-2.card-title {
+  color: var(--custom-black);
+  font-weight: bold;
+}
+
+.card {
+  background-color: var(--custom-black);
+}
+
+.text-shadow {
+  text-shadow: 2px 2px var(--custom-black);
+}
+
+/* Portrait section separator */
+.portrait-border {
+  border-top: 0.1em solid var(--accent-color);
+}
+
+/* Round portrait edges */
+.portrait-img {
+  border: 2px solid var(--custom-white);
+  border-radius: 200px;
+  max-width: 20em;
+}
+
+/* Aligns Font-Awesome icons as a horizontal grid*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hide text by default and format */
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--accent-color);
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s;
+  /* color: #fff; */
+  /* z-index: 1; */
+}
+
+/* Tooltip caret */
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--accent-color) transparent transparent transparent;
+}
+
+/* Tooltip text visibility */
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Resize Font-Awesome icons */
+.fas,
+.fab {
+  padding: 15px;
+  font-size: 1.5em;
+  border-radius: 50%;
+  /* width: 50px; */
+  /* text-align: center; */
+  /* text-decoration: none; */
+}
+
+/* Font-Awesome default color */
+.fa-linkedin,
+.fa-github,
+.fa-envelope {
+  background: var(--custom-black);
+  color: var(--custom-white);
+}
+
+.footer-contacts {
+  background: var(--accent-color);
+}
+
+/* Font-Awesome color inversion on hover*/
+.fas:hover,
+.fab:hover {
+  background: var(--custom-white);
+  color: var(--custom-black);
+}
+
+blockquote {
+  border-left: 5px solid teal;
+}
+
+/* Pads between profile photo and icons */
+.font-awesome-icon-container {
+  padding: 1em;
+}
+
+.sidenav-trigger {
+  color: var(--custom-white);
+}
+
+/* Mobile navigation slide-out color */
+.sidenav {
+  background-color: var(--mobile-nav-color);
+}
+
+#nav-links {
+  color: var(--custom-white);
+}
+
+#nav-links:hover {
+  background-color: teal;
+}
+
+nav ul a:hover {
+  background-color: teal;
+}
+
+/* Centers elements vertically within container */
+.parallax-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: 30em;
+  line-height: 0;
+  height: auto;
+}
+
+.header-parallax {
+  background: url(../backgrounds//home-hero-bg.svg),
+    linear-gradient(
+      180deg,
+      var(--primary-bg-color) 30.12%,
+      var(--accent-color) 192.47%
+    );
+  min-height: 48em;
+}
+
+.typed-text {
+  font-size: 2em;
+}
+
+.parallax-container .section {
+  width: 100%;
+}
+
+.no-margin {
+  margin: 0rem;
+}
+
+.professional-statement {
+  border: 2px solid var(--primary-bg-color);
+}
+
+.inside-trim {
+  border: 2px solid var(--custom-white);
+}
+
+/* Bubble letter effect */
+.tech-header {
+  text-shadow: 3px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  background-color: rgba(49, 49, 49, 0.9);
+  padding: 0.3em;
+  border: 2px solid var(--primary-bg-color);
+}
+
+/* Technologies background CSS */
+.hero-pattern {
+  background-color: #eeeeee;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23342f3b' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* CSS for spacing and organizing the technology icons */
+.tech-icon-block {
+  padding-left: 0.5em;
+  max-width: 6em;
+  padding-bottom: 1em;
+}
+
+/* Overrides Materialize - specifically to better fit project cards */
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .parallax-container .section {
+    top: 40%;
+  }
+
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+  .tech-icon-block {
+    max-width: 5em;
+  }
+  .fas,
+  .fab {
+    font-size: 2em;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+/* Float Shadow */
+.hvr-float-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
